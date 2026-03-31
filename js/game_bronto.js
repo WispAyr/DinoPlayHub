@@ -16,7 +16,7 @@ window.BrontoGame = (function() {
 
     let state = 'READY'; // READY, TIMING, REACHING, RETURNING, GAMEOVER
     let score = 0, animId = null;
-    let meter = 0, meterDir = 1, meterSpeed = 0.03;
+    let meter = 0, meterDir = 1, meterSpeed = 0.02;
     let targetHeight = 0;
     
     const bronto = {

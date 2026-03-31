@@ -41,7 +41,7 @@ window.DigGame = (function() {
         
         dirtCtx.globalCompositeOperation = 'destination-out';
         dirtCtx.beginPath();
-        dirtCtx.arc(x, y, 40, 0, Math.PI*2); // Brush size
+        dirtCtx.arc(x, y, 60, 0, Math.PI*2); // Increased Brush size
         dirtCtx.fill();
         
         // Track unique grid cells for scoring
@@ -128,7 +128,7 @@ window.DigGame = (function() {
         if(state === 'PLAYING') {
             let dt = time - lastTime;
             lastTime = time;
-            timer -= dt/10; // Convert to roughly 0.01s decrements
+            timer -= dt/15; // Convert to roughly 15 seconds instead of 10
             if(timer <= 0) {
                 timer = 0;
                 state = 'GAMEOVER';

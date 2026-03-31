@@ -17,7 +17,7 @@ window.TriceraGame = (function() {
 
     let state = 'READY'; // READY, PLAYING, GAMEOVER, PAUSED
     let score = 0, lives = 3, frames = 0, animId = null;
-    let bgOff = 0, grOff = 0, speed = 6;
+    let bgOff = 0, grOff = 0, speed = 4;
     
     // 3 Lanes (Y coordinates for items to spawn on, from top to bottom)
     const lanes = [CH - GROUND_H - 220, CH - GROUND_H - 120, CH - GROUND_H - 20];
@@ -50,7 +50,7 @@ window.TriceraGame = (function() {
             });
         },
         update: function() {
-            let spawnRate = Math.max(40, 90 - Math.floor(score/2));
+            let spawnRate = Math.max(60, 110 - Math.floor(score/2));
             if(frames % spawnRate === 0) this.spawn();
             
             for(let i=0; i<this.list.length; i++){
@@ -167,7 +167,7 @@ window.TriceraGame = (function() {
             }
         }
 
-        if(state === 'PLAYING') { frames++; speed = Math.min(15, 6 + score*0.05); obstacles.update(); player.update(); }
+        if(state === 'PLAYING') { frames++; speed = Math.min(10, 4 + score*0.05); obstacles.update(); player.update(); }
         else if(state === 'READY') { frames++; }
 
         obstacles.draw(); // Player is drawn inside obstacles to preserve depth sorting
@@ -195,7 +195,7 @@ window.TriceraGame = (function() {
 
     return {
         start: function() {
-            player.lane = 1; speed = 6;
+            player.lane = 1; speed = 4;
             obstacles.list = []; score = 0; lives = 3; frames = 0;
             state = 'READY';
             document.getElementById('current-score').innerText = score;

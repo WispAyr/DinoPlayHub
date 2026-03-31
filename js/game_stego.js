@@ -46,13 +46,14 @@ window.StegoGame = (function() {
             let type = Math.random() > 0.8 ? 'bomb' : (Math.random() > 0.5 ? 'apple' : 'leaf');
             this.list.push({
                 x: Math.random() * (CW-60) + 30, y: -50,
-                type: type, speed: 4 + Math.random() * 3 + (score*0.1),
+                type: type, speed: 2 + Math.random() * 2 + (score*0.05),
                 w: 60, h: 60, rot: Math.random()*Math.PI*2, rotSpd: (Math.random()-0.5)*0.1
             });
         },
         update: function() {
             fallbackTimer++;
-            let spawnRate = Math.max(30, 90 - score*2);
+            // Slower spawn rate
+            let spawnRate = Math.max(50, 110 - score*2);
             if(fallbackTimer > spawnRate) {
                 this.spawn(); fallbackTimer = 0;
             }

@@ -21,9 +21,9 @@ window.FlappyGame = (function() {
     let score = 0, frames = 0, animId = null;
     let bgOff = 0, grOff = 0;
     
-    // Settings (Standard Mode)
+    // Settings (Adjusted for Young Kids)
     const set = { 
-        GRAV: 0.25, FLAP: -5.5, SPD: 3, SPAWN: 1500, GAP: 200 
+        GRAV: 0.15, FLAP: -4.5, SPD: 2, SPAWN: 2000, GAP: 300 
     };
 
     const particles = [];
