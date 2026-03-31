@@ -1,8 +1,8 @@
 // --- CONFIGURATION ---
 const GAME_CONFIG = {
     BRAND_NAME: "Dino Play Hub",
-    LEAGUE_TABLE_URL: "https://YOUR-LEAGUE-WEBSITE.com/submit",
-    HOST_URL: "https://YOUR-GAME-WEBSITE.com", // The URL for the "Play on Phone" QR code
+    LEAGUE_TABLE_URL: "https://games.ayrpavilion.com/submit",
+    HOST_URL: "https://games.ayrpavilion.com/", // The URL for the "Play on Phone" QR code
     
     // Unlocks per total combined score across games
     STICKER_THRESHOLDS: {

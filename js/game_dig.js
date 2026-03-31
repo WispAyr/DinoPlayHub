@@ -63,6 +63,7 @@ window.DigGame = (function() {
     }
 
     function handleMove(e) {
+        if(e.cancelable) e.preventDefault();
         if(state === 'READY') {
             state = 'PLAYING';
             lastTime = performance.now();

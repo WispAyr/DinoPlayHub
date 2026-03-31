@@ -103,6 +103,7 @@ window.StegoGame = (function() {
     }
 
     function onMove(e) {
+        if(e.cancelable) e.preventDefault();
         if(state === 'READY') state = 'PLAYING';
         if(state !== 'PLAYING') return;
         

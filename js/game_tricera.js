@@ -114,11 +114,13 @@ window.TriceraGame = (function() {
 
     let touchStartY = 0;
     function handleTouchStart(e) {
+        if(e.cancelable) e.preventDefault();
         if(state === 'READY') state = 'PLAYING';
         touchStartY = e.touches ? e.touches[0].clientY : e.clientY;
     }
     
     function handleTouchEnd(e) {
+        if(e.cancelable && e.type !== 'mouseup') e.preventDefault();
         if(state !== 'PLAYING') return;
         let touchEndY = e.changedTouches ? e.changedTouches[0].clientY : e.clientY;
         let diff = touchEndY - touchStartY;
