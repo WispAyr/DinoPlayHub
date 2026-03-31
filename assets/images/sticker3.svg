@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F48FB1" />
+      <stop offset="100%" stop-color="#C2185B" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="#FCE4EC" stroke="#F8BBD0" stroke-width="4"/>
+  
+  <!-- Stego Body/Head -->
+  <path d="M 20 60 Q 50 30 80 60 Q 85 75 50 75 Q 15 75 20 60 Z" fill="url(#grad3)" stroke="#880E4F" stroke-width="4"/>
+  <!-- Plates -->
+  <path d="M 30 46 L 40 20 L 50 42 Z" fill="#FFB74D" stroke="#880E4F" stroke-width="2"/>
+  <path d="M 50 42 L 60 15 L 70 46 Z" fill="#FFB74D" stroke="#880E4F" stroke-width="2"/>
+  
+  <circle cx="35" cy="55" r="5" fill="black"/>
+  <circle cx="65" cy="55" r="5" fill="black"/>
+  <!-- Blush -->
+  <circle cx="25" cy="62" r="4" fill="#FF8A80" opacity="0.8"/>
+  <circle cx="75" cy="62" r="4" fill="#FF8A80" opacity="0.8"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="rockGrad" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#9E9E9E"/>
+      <stop offset="100%" stop-color="#424242"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="5" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Main Rock -->
+  <path d="M 20 80 L 10 50 L 30 20 L 70 15 L 90 45 L 80 85 Z" fill="url(#rockGrad)" stroke="#212121" stroke-width="4" stroke-linejoin="round" filter="url(#shadow)"/>
+  <!-- Cracks / Details -->
+  <path d="M 30 20 L 45 45 L 70 15 M 45 45 L 40 80 M 45 45 L 80 60" fill="none" stroke="#212121" stroke-width="3" stroke-linecap="round"/>
+  <!-- Highlights -->
+  <path d="M 25 45 L 35 25" fill="none" stroke="#E0E0E0" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>

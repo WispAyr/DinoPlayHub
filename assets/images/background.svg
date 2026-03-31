@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 960">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="60%" stop-color="#B3E5FC"/>
+      <stop offset="100%" stop-color="#E1F5FE"/>
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="100%" stop-color="#C8E6C9"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1080" height="960" fill="url(#skyGrad)"/>
+  
+  <!-- Clouds -->
+  <path d="M 100 200 Q 120 150 160 180 Q 200 150 220 200 Q 250 230 200 240 L 120 240 Q 80 230 100 200 Z" fill="#FFFFFF" opacity="0.8"/>
+  <path d="M 500 300 Q 520 260 560 280 Q 600 260 620 300 Q 640 330 600 340 L 520 340 Q 480 330 500 300 Z" fill="#FFFFFF" opacity="0.6"/>
+  <path d="M 800 150 Q 830 100 880 130 Q 930 100 960 150 Q 990 190 940 200 L 820 200 Q 770 190 800 150 Z" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Distant Mountains -->
+  <path d="M 0 960 L 0 700 L 150 550 L 350 750 L 550 450 L 800 700 L 1080 500 L 1080 960 Z" fill="url(#mountainGrad)" opacity="0.6"/>
+</svg>

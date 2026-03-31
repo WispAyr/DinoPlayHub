@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD54F" />
+      <stop offset="50%" stop-color="#FFCA28" />
+      <stop offset="100%" stop-color="#F57F17" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="#FFFDE7" stroke="#FFF59D" stroke-width="4"/>
+  
+  <!-- Golden Egg -->
+  <ellipse cx="50" cy="55" rx="20" ry="25" fill="url(#grad5)" stroke="#E65100" stroke-width="4"/>
+  <!-- Shine -->
+  <path d="M 40 45 Q 45 35 55 40" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Stars -->
+  <path d="M 30 30 L 32 35 L 37 35 L 33 38 L 35 43 L 30 40 L 25 43 L 27 38 L 23 35 L 28 35 Z" fill="#FFC107" filter="url(#glow)"/>
+  <path d="M 70 40 L 71 43 L 74 43 L 72 45 L 73 48 L 70 46 L 67 48 L 68 45 L 66 43 L 69 43 Z" fill="#FFC107" filter="url(#glow)"/>
+  <path d="M 60 70 L 61 72 L 63 72 L 61 73 L 62 75 L 60 74 L 58 75 L 59 73 L 57 72 L 59 72 Z" fill="#FFC107" filter="url(#glow)"/>
+</svg>

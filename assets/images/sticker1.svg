@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#FFD54F" />
+      <stop offset="100%" stop-color="#FFB300" />
+    </radialGradient>
+    <filter id="shadow1">
+      <feDropShadow dx="2" dy="5" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="#FFF9C4" stroke="#FFF59D" stroke-width="4"/>
+  
+  <!-- T-Rex Head -->
+  <path d="M 30 70 Q 20 40 40 25 Q 70 20 80 40 L 80 50 Q 85 55 75 60 L 55 60 L 60 70 Z" fill="url(#grad1)" stroke="#FF6F00" stroke-width="4" filter="url(#shadow1)"/>
+  
+  <!-- Eye -->
+  <circle cx="55" cy="40" r="8" fill="white" stroke="#FF6F00" stroke-width="2"/>
+  <circle cx="58" cy="40" r="3" fill="black"/>
+  <!-- Teeth -->
+  <path d="M 60 60 L 63 65 L 66 60 L 69 65 L 72 60" fill="white" stroke="#FF6F00" stroke-width="1.5"/>
+</svg>

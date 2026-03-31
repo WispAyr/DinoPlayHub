@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dino Play Hub</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        
+        <!-- Game Area Canvas (Dynamic per game) -->
+        <canvas id="gameCanvas" width="540" height="960" class="hidden"></canvas>
+        
+        <!-- Persistent Top UI -->
+        <div id="top-ui">
+            <button id="btn-audio" class="icon-btn tooltip">🔊</button>
+            <button id="btn-home" class="icon-btn hidden">🏠</button>
+            <button id="btn-pause" class="icon-btn hidden">⏸️</button>
+        </div>
+
+        <div id="hud" class="hidden">
+            <div class="score-pill">Score: <span id="current-score">0</span></div>
+        </div>
+
+        <!-- Master Hub Screen -->
+        <div id="screen-hub" class="screen active">
+            <h1 id="brand-title" class="title-bounce">Dino Play<br>Hub!</h1>
+            
+            <div class="games-grid">
+                <!-- Games -->
+                <button class="game-card bounce-in" data-game="flappy" style="background: linear-gradient(180deg, #A5D6A7, #2E7D32); animation-delay: 0.1s;">
+                    <img src="assets/images/pterodactyl.svg"> Flappy Ptero
+                </button>
+                <button class="game-card bounce-in" data-game="stego" style="background: linear-gradient(180deg, #F48FB1, #C2185B); animation-delay: 0.2s;">
+                    <img src="assets/images/sticker3.svg"> Snack Stack
+                </button>
+                <button class="game-card bounce-in" data-game="tricera" style="background: linear-gradient(180deg, #81D4FA, #0288D1); animation-delay: 0.3s;">
+                    <img src="assets/images/sticker2.svg"> Tricera-Charge
+                </button>
+                <button class="game-card bounce-in" data-game="bronto" style="background: linear-gradient(180deg, #C5E1A5, #558B2F); animation-delay: 0.4s;">
+                    <img src="assets/images/sticker4.svg"> Big Reach
+                </button>
+                <button class="game-card bounce-in" data-game="dig" style="background: linear-gradient(180deg, #FFCC80, #EF6C00); animation-delay: 0.5s;">
+                    <img src="assets/images/sticker5.svg"> Dino Dig (Beta)
+                </button>
+            </div>
+
+            <div class="secondary-buttons">
+                <button id="btn-stickers" class="secondary-btn">⭐ Sticker Book</button>
+            </div>
+            
+            <!-- Play on phone QR -->
+            <div class="play-on-phone pulse">
+                <div class="play-on-phone-text">
+                    <h3>Play on Phone!</h3>
+                    <p>Scan to play anywhere!</p>
+                </div>
+                <div id="qr-phone"></div>
+            </div>
+        </div>
+
+        <!-- Stickers Screen -->
+        <div id="screen-stickers" class="screen hidden overlay-bg">
+            <div class="panel bounce-in">
+                <h2>Sticker Book</h2>
+                <div class="sticker-grid" id="sticker-grid"></div>
+                <p>Total Score: <span id="total-score-display" class="score-display">0</span></p>
+                <button class="primary-btn btn-close-panel" data-target="screen-hub">BACK TO HUB</button>
+            </div>
+        </div>
+
+        <!-- Generic Game Over Screen -->
+        <div id="screen-gameover" class="screen hidden overlay-bg">
+            <div class="panel pop-in">
+                <h2>Game Over!</h2>
+                <p class="score-display">Score: <span id="final-score">0</span></p>
+                <button id="btn-restart" class="primary-btn pulse">PLAY AGAIN</button>
+                <button id="btn-qr-open" class="secondary-btn">Global League</button>
+                <button class="tertiary-btn btn-close-panel" data-target="screen-hub">HUB</button>
+            </div>
+        </div>
+
+        <!-- League QR Submit Screen -->
+        <div id="screen-qr" class="screen hidden overlay-bg">
+            <div class="panel bounce-in">
+                <h2>Scan to Submit!</h2>
+                <p>Put your score on the Global Leaderboard!</p>
+                <div id="qrcode-container"></div>
+                <button class="primary-btn btn-close-panel" data-target="screen-hub">DONE</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/game_flappy.js"></script>
+    <script src="js/game_stego.js"></script>
+    <script src="js/game_tricera.js"></script>
+    <script src="js/game_bronto.js"></script>
+    <script src="js/game_dig.js"></script>
+    <script src="js/hub.js"></script>
+</body>
+</html>

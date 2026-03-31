@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="tarGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#424242"/>
+      <stop offset="80%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#212121"/>
+    </radialGradient>
+  </defs>
+  <!-- Tar Pool -->
+  <ellipse cx="50" cy="50" rx="45" ry="25" fill="url(#tarGrad)"/>
+  <!-- Bubbles -->
+  <circle cx="30" cy="45" r="5" fill="none" stroke="#757575" stroke-width="2"/>
+  <circle cx="65" cy="55" r="8" fill="none" stroke="#757575" stroke-width="2"/>
+  <path d="M 61 55 Q 65 50 69 55" fill="none" stroke="#FFF" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="45" cy="50" r="3" fill="#212121"/> <!-- pooched bubble -->
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g fill="#FFFDE7" stroke="#BCAAA4" stroke-width="3" stroke-linejoin="round" filter="url(#shadow)">
+    <!-- Skull -->
+    <path d="M 150 40 Q 180 30 180 50 Q 180 70 160 80 Q 140 70 130 50 Z" />
+    <circle cx="160" cy="50" r="8" fill="#5D4037" stroke="none"/>
+    <!-- Spine -->
+    <path d="M 40 80 C 60 40, 100 30, 140 50" fill="none" stroke="#FFFDE7" stroke-width="12"/>
+    <path d="M 40 80 C 60 40, 100 30, 140 50" fill="none" stroke="#BCAAA4" stroke-width="4"/>
+    <!-- Ribs -->
+    <path d="M 120 45 Q 120 80 100 90 M 100 40 Q 100 75 80 85 M 80 45 Q 80 70 60 80" fill="none" stroke="#FFFDE7" stroke-width="8"/>
+    <path d="M 120 45 Q 120 80 100 90 M 100 40 Q 100 75 80 85 M 80 45 Q 80 70 60 80" fill="none" stroke="#BCAAA4" stroke-width="3"/>
+    <!-- Legs -->
+    <path d="M 100 50 L 110 100 L 120 110 M 70 50 L 60 90 M 40 80 L 20 110" fill="none" stroke="#FFFDE7" stroke-width="10"/>
+    <path d="M 100 50 L 110 100 L 120 110 M 70 50 L 60 90 M 40 80 L 20 110" fill="none" stroke="#BCAAA4" stroke-width="3"/>
+  </g>
+</svg>
